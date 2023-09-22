@@ -1,0 +1,19 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.editor-out-container {
+  border: 1px solid black;
+  height: 400px;
+}
+
+#json-output {
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 400px;
+  width: 100%;
+}
