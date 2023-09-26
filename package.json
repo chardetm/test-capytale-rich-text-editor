@@ -12,7 +12,8 @@
   "dependencies": {
     "capytale-rich-text-editor": "../capytale-rich-text-editor",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-json-tree": "^0.18.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
