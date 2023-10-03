@@ -40,16 +40,15 @@ function AppContent() {
 
   const onChange = !liveJson
     ? undefined
-    : (json: string, html: string) => {
+    : (json: string) => {
         setJsonOutput(JSON.parse(json));
-        setHtmlOutput(html);
       };
 
   return (
     <>
       <div className="editor-out-container">
         <CapytaleRichTextEditor
-          onChange={onChange}
+          onJsonChange={onChange}
           isEditable={true}
           htmlInitialContent="<h1>Test</h1><p>Voici un <a href='https://google.fr/'>lien vers Google</a>.</p>"
         />
