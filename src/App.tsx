@@ -2,8 +2,8 @@ import {
   CapytaleRichTextEditor,
   CapytaleRichTextEditorContext,
   useCapytaleRichTextEditorContext,
-} from "capytale-rich-text-editor";
-import "capytale-rich-text-editor/style.css";
+} from "@capytale/capytale-rich-text-editor";
+import "@capytale/capytale-rich-text-editor/style.css";
 import { useState } from "react";
 
 import { JSONTree } from "react-json-tree";
@@ -30,11 +30,11 @@ function AppContent() {
     if (!capytaleRichTextEditorContext.getState) {
       alert("Méthode non chargée");
     } else {
-      const state = await capytaleRichTextEditorContext.getState();
+      const state = await capytaleRichTextEditorContext.getState(true, true);
       console.log("JSON :", state.json);
       console.log("HTML :", state.html);
-      setJsonOutput(JSON.parse(state.json));
-      setHtmlOutput(state.html);
+      state.json && setJsonOutput(JSON.parse(state.json));
+      state.html && setHtmlOutput(state.html);
     }
   };
 
